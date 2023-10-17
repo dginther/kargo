@@ -25,7 +25,8 @@ if [ "$ans" == "y" ]; then
   helm upgrade --install argocd ./argo-cd \
     --namespace=$ARGOCD_NS \
     --create-namespace \
-    -f $VALUES_FILE
+    -f $VALUES_FILE \
+    -f values-override.yaml
 else
   echo "INFO: Exit without any action"
   exit 0
