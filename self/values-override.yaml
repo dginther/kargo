@@ -24,7 +24,7 @@ server:
         helm:
           version: v3
           valueFiles:
-          - values.yaml
+          - ../values.yaml
           - ../values-override.yaml
         path: argocd-install/argo-cd
         repoURL: https://github.com/dginther/kargo.git
