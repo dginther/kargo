@@ -19,4 +19,10 @@ spec:
         - name: installCRDs
           value: true
           forceString: true
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
+      syncOptions:
+      - CreateNamespace=true
 
