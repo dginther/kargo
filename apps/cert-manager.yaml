@@ -1,0 +1,22 @@
+apiVersion: argiproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cert-manager
+  namespace: cert-manager
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    name: cert-manager
+spec:
+  project: default
+  source:
+    repoUrl: https://charts.jetstack.io
+    chart: cert-manager
+    targetRevision: v1.13.1
+    helm:
+      skipCrds: false
+      parameters:
+        - name: installCRDs
+          value: true
+          forceString: true
+
