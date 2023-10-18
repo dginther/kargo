@@ -13,7 +13,7 @@ spec:
     server: "https://kubernetes.default.svc"
     namespace: kargo
   source:
-    repoURL: oci://ghcr.io/akuity/kargo-charts/kargo
+    repoURL: "https://ghcr.io/akuity/kargo-charts/kargo"
     chart: kargo
     targetRevision: v1.13.1
     helm:
