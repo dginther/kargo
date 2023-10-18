@@ -16,8 +16,8 @@ spec:
     helm:
       skipCrds: false
       parameters:
-        - name: installCRDs
-          value: true
+        - name: "installCRDs"
+          value: "true"
           forceString: true
     syncPolicy:
       automated:
