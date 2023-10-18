@@ -9,6 +9,7 @@ metadata:
     name: cert-manager
 spec:
   project: default
+  destination: https://kubernetes.default.svc
   source:
     repoUrl: https://charts.jetstack.io
     chart: cert-manager
