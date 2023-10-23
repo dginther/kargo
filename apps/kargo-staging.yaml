@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kargo-demo-staging
+  namespace: argocd
+  annotations:
+    kargo.akuity.io/authorized-stage: kargo-demo:staging
+spec:
+  project: default
+  source:
+    repoURL: ${GITOPS_REPO_URL}
+    targetRevision: stage/staging
+    path: stages/staging
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: staging
