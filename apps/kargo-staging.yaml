@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: ${GITOPS_REPO_URL}
+    repoURL: https://github.com/dginther/kargo-demo
     targetRevision: stage/staging
     path: stages/staging
   destination:
